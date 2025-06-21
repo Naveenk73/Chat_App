@@ -1,0 +1,139 @@
+/* style.css */
+body {
+    font-family: 'Inter, sans-serif';
+    background: #eef2f5;
+    margin: 0;
+    padding: 0;
+}
+
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.join-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.join-box input, .join-box button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.join-box button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+.header,h2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.leave-btn {
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+#typing-status {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding-top: 10px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.send-btn {
+    background-color: #28a745;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.send-btn:hover{
+    background-color: #218838;
+    transition: scale 0.2s ease;
+
+}
+.send-btn .arrow {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .chat-container {
+        height: 95vh;
+        padding: 10px;
+    }
+}

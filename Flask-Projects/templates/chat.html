@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    
+    <script>
+        const USERNAME = "{{ username }}";
+        const ROOM = "{{ room }}";
+        const CHAT_HISTORY = "{{ chat_history | tojson | safe }}";
+    </script>
+    
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header"> 
+            <h2>Chat Room "{{username}}"</h2>
+            <button class="leave-btn" onclick="leaveRoom()">Leave</button>
+        </div>
+        <div id="chat-box" class="chat-box"></div>
+        <div id="typing-status"></div>
+        <div class="input-group">
+            <input id="message" placeholder="Type your message..." oninput="handleTyping()" />
+            <button class="send-btn" onclick="sendMessage()">
+                <span class="arrow">&#10148;</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
